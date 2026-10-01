@@ -1,0 +1,10 @@
+name : postboy
+services: 
+  db:
+    image : postgres:latest
+    environment:
+      POSTGRES_USER : postgres
+      POSTGRES_PASSWORD : postgres_100
+      POSTGRES_DB : postgres_01
+    ports:
+     - "5432:5432"
