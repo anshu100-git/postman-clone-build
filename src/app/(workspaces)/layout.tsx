@@ -2,6 +2,7 @@ import React from "react";
 import Header from "@/modules/layout/components/header";
 import { currentUser } from "@/modules/authentication/actions";
 
+/** Workspace route group layout rendering the header, side panel, and page content. */
 const RootLayout = async ({ children }: { children: React.ReactNode }) => {
     const user = await currentUser();
     return (

@@ -37,6 +37,7 @@ interface UserButtonProps {
   showMemberSince?: boolean;
 }
 
+/** Avatar trigger with a dropdown menu for profile, billing, settings, and sign-out actions. */
 export default function UserButton({
   user,
   onLogout,

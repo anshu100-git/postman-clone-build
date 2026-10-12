@@ -8,6 +8,7 @@ import Link from 'next/link'
 // Installing react-icons ensures you have valid official brand logos
 import { FaGithub, FaGoogle } from 'react-icons/fa' 
 
+/** Sign-in page offering GitHub and Google OAuth sign-in options. */
 const SignInPage = () => {
   return (
     <section className='flex min-h-screen items-center justify-center bg-zinc-50 dark:bg-zinc-950 px-4 py-16 md:py-32'>

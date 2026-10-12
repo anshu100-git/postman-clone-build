@@ -6,6 +6,7 @@ import { Hint } from '@/components/ui/hint';
 // ✅ FIX 1: lucide-react ko hata kar react-icons/hi2 ka use kiya hai
 import { HiUserPlus } from 'react-icons/hi2'; 
 
+/** Header button that opens the invite-member action, shown with a tooltip hint. */
 const InviteMember = () => {
   return (
     <Hint label='Invite Member'>

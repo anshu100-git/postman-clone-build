@@ -4,6 +4,7 @@ import { auth } from "@/lib/auth"
 import db from "@/lib/db"
 import { headers } from "next/headers"
 
+/** Fetches the currently authenticated user's profile from the database, or null if unauthenticated. */
 export const currentUser  = async ()=>{
     try{
         const session = await auth.api.getSession({
