@@ -63,6 +63,12 @@ function CommandDialog({
   )
 }
 
+/**
+ * Renders a command palette input with a search icon and shared styling.
+ *
+ * @param props - Command input properties, including optional additional CSS classes.
+ * @returns The styled input wrapper with remaining props forwarded to the input.
+ */
 function CommandInput({
   className,
   ...props

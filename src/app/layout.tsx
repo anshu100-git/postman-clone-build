@@ -18,6 +18,12 @@ export const metadata: Metadata = {
   description: "A Postman-like API client built with Next.js",
 };
 
+/**
+ * Renders the root HTML document with Geist font variables and toast notifications.
+ *
+ * @param props - Layout properties containing the nested route content.
+ * @returns The application document containing the toaster and child routes.
+ */
 export default function RootLayout({
   children,
 }: Readonly<{

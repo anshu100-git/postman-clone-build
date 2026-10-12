@@ -1,6 +1,11 @@
 import { currentUser } from "@/modules/authentication/actions";
 import UserButton from "@/modules/authentication/components/user-button";
 
+/**
+ * Loads the current user and renders account controls or a sign-in link.
+ *
+ * @returns The workspace home page for the current session.
+ */
 export default async function Home() {
   const user = await currentUser();
   return (
