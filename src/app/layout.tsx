@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   description: "A Postman-like API client built with Next.js",
 };
 
+/** Root HTML layout applying global fonts, styles, and the toast notification host. */
 export default function RootLayout({
   children,
 }: Readonly<{

@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation'
 import { headers } from 'next/headers'
 import React from 'react'
 
+/** Auth route group layout that redirects already-authenticated users away from auth pages. */
 const AuthLayout = async ({children}:{children : React.ReactNode}) => {
  
     const session = await auth.api.getSession({

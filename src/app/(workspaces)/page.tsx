@@ -1,6 +1,7 @@
 import { currentUser } from "@/modules/authentication/actions";
 import UserButton from "@/modules/authentication/components/user-button";
 
+/** Workspace home page showing the user menu when signed in, or a sign-in prompt otherwise. */
 export default async function Home() {
   const user = await currentUser();
   return (

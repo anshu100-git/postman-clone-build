@@ -17,6 +17,7 @@ interface UserProps {
   } | null; // Added support for null if user session takes time to load
 } 
 
+/** Top application header with branding, search, workspace controls, and the user menu. */
 const Header = ({ user }: UserProps) => {
   return (
     // ✅ FIX 2: Modern utility wrappers used instead of raw forced row grids

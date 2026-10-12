@@ -12,6 +12,7 @@ import {
     CommandList,
 } from "@/components/ui/command"
 
+/** Command-palette style search bar, toggled by click or the Cmd/Ctrl+K shortcut. */
 const SearchBar = () => {
     const [open, setOpen] = useState(false)
 

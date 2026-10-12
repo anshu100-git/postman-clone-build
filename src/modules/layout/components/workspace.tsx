@@ -6,6 +6,7 @@ import { Hint } from '@/components/ui/hint'
 // ✅ FIX 1: lucide-react ko hata kar react-icons/hi2 use kiya hai
 import { HiBriefcase } from 'react-icons/hi2' 
 
+/** Header button for switching the active workspace, shown with a tooltip hint. */
 const WorkSpace = () => {
   return (
    <Hint label='Change Workspace'>
