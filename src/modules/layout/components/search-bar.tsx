@@ -6,9 +6,7 @@ import { IoSearchOutline } from 'react-icons/io5'
 import {
     CommandDialog,
     CommandEmpty,
-    CommandGroup,
     CommandInput,
-    CommandItem,
     CommandList,
 } from "@/components/ui/command"
 
@@ -55,20 +53,6 @@ const SearchBar = () => {
                         <CommandEmpty className="text-sm text-zinc-500 py-6 text-center select-none">
                             No results found.
                         </CommandEmpty>
-                        <CommandGroup heading="Suggestions" className="p-1.5 text-xs text-zinc-400">
-                            <CommandItem onSelect={() => setOpen(false)} className="cursor-pointer flex items-center px-3 py-2 text-sm text-zinc-700 dark:text-zinc-300 rounded-md hover:bg-zinc-50 dark:hover:bg-zinc-900">
-                                <span>Pre-request Script</span>
-                            </CommandItem>
-                            <CommandItem onSelect={() => setOpen(false)} className="cursor-pointer flex items-center px-3 py-2 text-sm text-zinc-700 dark:text-zinc-300 rounded-md hover:bg-zinc-50 dark:hover:bg-zinc-900">
-                                <span>Tests</span>
-                            </CommandItem>
-                            <CommandItem onSelect={() => setOpen(false)} className="cursor-pointer flex items-center px-3 py-2 text-sm text-zinc-700 dark:text-zinc-300 rounded-md hover:bg-zinc-50 dark:hover:bg-zinc-900">
-                                <span>Variables</span>
-                            </CommandItem>
-                            <CommandItem onSelect={() => setOpen(false)} className="cursor-pointer flex items-center px-3 py-2 text-sm text-zinc-700 dark:text-zinc-300 rounded-md hover:bg-zinc-50 dark:hover:bg-zinc-900">
-                                <span>Documentation</span>
-                            </CommandItem>
-                        </CommandGroup>
                     </CommandList>
 
                     {/* Bottom navigation hints panel */}
