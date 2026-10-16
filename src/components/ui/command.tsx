@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { Command as CommandPrimitive } from "cmdk"
-import { cn } from "cn"
+import { cn } from "@/lib/utils"
 
 import {
   Dialog,
@@ -30,6 +30,7 @@ function Command({
   )
 }
 
+
 function CommandDialog({
   title = "Command Palette",
   description = "Search for a command to run...",
@@ -38,30 +39,33 @@ function CommandDialog({
   showCloseButton = false,
   ...props
 }: Omit<React.ComponentProps<typeof Dialog>, "children"> & {
-  title?: string
-  description?: string
-  className?: string
-  showCloseButton?: boolean
-  children: React.ReactNode
+  title?: string;
+  description?: string;
+  className?: string;
+  showCloseButton?: boolean;
+  children: React.ReactNode;
 }) {
   return (
     <Dialog {...props}>
-      <DialogHeader className="sr-only">
-        <DialogTitle>{title}</DialogTitle>
-        <DialogDescription>{description}</DialogDescription>
-      </DialogHeader>
       <DialogContent
         className={cn(
-          "top-1/3 translate-y-0 overflow-hidden rounded-xl! p-0",
+          "top-1/3 translate-y-0 overflow-hidden rounded-xl p-0",
           className
         )}
         showCloseButton={showCloseButton}
       >
-        {children}
+        <DialogHeader className="sr-only">
+          <DialogTitle>{title}</DialogTitle>
+          <DialogDescription>{description}</DialogDescription>
+        </DialogHeader>
+
+        <Command>{children}</Command>
       </DialogContent>
     </Dialog>
-  )
+  );
 }
+
+
 
 function CommandInput({
   className,
@@ -70,9 +74,14 @@ function CommandInput({
   return (
     <div
       data-slot="command-input-wrapper"
-      className="flex items-center gap-2 border-b border-zinc-100 dark:border-zinc-800 px-3"
+      className="flex items-center gap-2 border-b border-border px-3"
     >
-      <HugeiconsIcon icon={SearchIcon} strokeWidth={2} className="size-3.5 shrink-0 opacity-50" />
+      <HugeiconsIcon
+        icon={SearchIcon}
+        strokeWidth={2}
+        className="size-3.5 shrink-0 opacity-50"
+      />
+
       <CommandPrimitive.Input
         data-slot="command-input"
         className={cn(
@@ -82,7 +91,7 @@ function CommandInput({
         {...props}
       />
     </div>
-  )
+  );
 }
 
 function CommandList({

@@ -20,37 +20,42 @@ interface UserProps {
 const Header = ({ user }: UserProps) => {
   return (
     // ✅ FIX 2: Modern utility wrappers used instead of raw forced row grids
-    <header className='flex items-center justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-4 py-2.5 shadow-sm select-none'>
-        
-        {/* Left Section: Logo Branding */}
-        <div className='flex items-center gap-2 hover:opacity-85 transition-opacity cursor-pointer'>
-          <div className='p-1.5 bg-indigo-50 dark:bg-indigo-950/40 rounded-lg flex items-center justify-center'>
-            <FaPlug className='h-5 w-5 text-indigo-500 dark:text-indigo-400 rotate-45' />
-          </div>
-          <span className='font-bold text-lg tracking-tight text-zinc-900 dark:text-zinc-50 hidden sm:block'>
-            Postman
-          </span>
-        </div>
+    
+<header className="flex  h-[50px]    items-center justify-between gap-5 border-b border-zinc-200 bg-white px-6 shadow-sm select-none dark:border-zinc-800 dark:bg-zinc-950">
 
-        {/* Center Section: Flexible Search Container */}
-        <div className='flex-1 max-w-xl mx-auto'>
-          <div className="relative rounded-lg overflow-hidden flex items-center justify-center w-full">
-            <SearchBar />
-          </div>
-        </div>
+  {/* Logo */}
+  <div className="flex shrink-0 cursor-pointer items-center gap-3 transition-opacity hover:opacity-85">
+    <div className="flex size-8 items-center justify-center rounded-xl bg-indigo-50 dark:bg-indigo-950/40">
+      <FaPlug className="size-4 rotate-45 text-indigo-500 dark:text-indigo-400" />
+    </div>
 
-        {/* Right Section: Action Controls & User Identity */}
-        <div className='flex items-center gap-3.5'>
-          <div className='flex items-center gap-2 border-r border-zinc-200 dark:border-zinc-800 pr-3.5'>
-            <InviteMember />
-            <WorkSpace />
-          </div>
-          <div className='flex items-center justify-center shrink-0'>
-            <UserButton user={user} />
-          </div>
-        </div>
+    <span className="hidden text-xl font-bold tracking-tight text-zinc-900 sm:block dark:text-zinc-50">
+      Postman
+    </span>
+  </div>
 
-    </header>
+  {/* Search */}
+  <div className="mx-auto flex min-w-0 flex-1 justify-center">
+    <div className="w-full max-width: 400px">
+      <SearchBar />
+    </div>
+  </div>
+
+  {/* Actions */}
+  <div className="flex shrink-0 items-center gap-4">
+    <div className="flex items-center gap-3 border-r border-zinc-200 pr-4 dark:border-zinc-800">
+      <InviteMember />
+      <WorkSpace />
+    </div>
+
+    <div className="flex shrink-0 items-center justify-center">
+      <UserButton user={user} />
+    </div>
+  </div>
+
+</header>
+
+
   )
 }
 
