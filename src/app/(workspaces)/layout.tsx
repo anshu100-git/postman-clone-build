@@ -1,9 +1,15 @@
 import React from "react";
 import Header from "@/modules/layout/components/header";
 import { currentUser } from "@/modules/authentication/actions";
+import { initializeWorkspace } from "@/modules/workspace/actions";
+import WorkSpace from "@/modules/layout/components/workspace";
 
 const RootLayout = async ({ children }: { children: React.ReactNode }) => {
+      const workspace = await initializeWorkspace()
     const user = await currentUser();
+    //----------COSNOLE JUST FOR CHECKING WORKSPACE---------------//
+    // console.log(JSON.stringify(workspace))
+
     return (
         <>
             <Header user={user} />

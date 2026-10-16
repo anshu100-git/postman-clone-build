@@ -51,7 +51,7 @@ const SearchBar = () => {
                         placeholder="Type a command or search..."
                         className="h-11 border-none focus:ring-0 text-sm placeholder:text-zinc-400 text-zinc-900 dark:text-zinc-50"
                     />
-                    <CommandList className="border-t border-zinc-100 dark:border-zinc-900 max-h-[300px]">
+                    <CommandList className="border-t border-zinc-100 dark:border-zinc-900   max-height: 300px">
                         <CommandEmpty className="text-sm text-zinc-500 py-6 text-center select-none">
                             No results found.
                         </CommandEmpty>
